@@ -12,24 +12,23 @@ print:
   
 # Grid Settings
 grid:
-  size: [10, 10]      # 10x10 网格
-  square_size: 10     # 10mm 方块
-  gap: 5             # 5mm 间距
-  start_pos: [32.4, 145]  # 起始位置
+  size: [10, 10]      # 10x10 grid
+  square_size: 10     # 10mm square
+  gap: 5             # 5mm gap
+  start_pos: [32.4, 145]  # start position
 
 # Database Settings
 database:
-  type: "sqlite"    # sqlite 或 postgresql
-  path: "print_history.db"  # SQLite 数据库路径
-  # PostgreSQL settings (optional)
-  # host: "localhost"
-  # port: 5432
-  # database: "bambu_prints"
-  # user: "postgres"
-  # password: "password"
+  type: "sqlite"
+  path: "print_history.db"
+  backup_dir: "backups"
+  backup_interval: 86400  # 24 hours in seconds
+  keep_backups_days: 30   # Keep backups for 30 days
 
 # MQTT Settings
 mqtt:
-  host: "localhost"
-  port: 1883
-  topic_prefix: "bambu_a1_mini" 
+  host: "mqtt.bambulab.com"
+  port: 8883
+  username: "bblp"
+  password: "bblp"
+  printer_serial: "0309CA471800852"

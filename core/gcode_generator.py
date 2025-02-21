@@ -5,20 +5,20 @@ class GCodeGenerator:
             self.template = f.read()
     
     def generate_square_gcode(self, position, params):
-        """生成单个方块的G-code
+        """Generate G-code for a single square
         
         Args:
-            position (dict): 位置信息
-            params (dict): 打印参数
+            position (dict): position information
+            params (dict): print parameters
         """
         gcode = self.template
         
-        # 替换位置参数
+        # replace position parameters
         x, y = position['position']
         gcode = gcode.replace("X42.15", f"X{x}")
         gcode = gcode.replace("Y154.75", f"Y{y}")
         
-        # 替换打印参数
+        # replace print parameters
         gcode = gcode.replace("[nozzle_temperature]", str(params['nozzle_temp']))
         gcode = gcode.replace("[bed_temperature]", str(params['bed_temp']))
         
