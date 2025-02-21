@@ -1,0 +1,35 @@
+# Printer Configuration
+printer:
+  ip: "192.168.1.124"
+  serial: "0309CA471800852"
+  access_code: "14011913"
+
+# Print Settings
+print:
+  default_nozzle_temp: 220
+  default_bed_temp: 60
+  default_print_speed: 60
+  
+# Grid Settings
+grid:
+  size: [10, 10]      # 10x10 网格
+  square_size: 10     # 10mm 方块
+  gap: 5             # 5mm 间距
+  start_pos: [32.4, 145]  # 起始位置
+
+# Database Settings
+database:
+  type: "sqlite"    # sqlite 或 postgresql
+  path: "print_history.db"  # SQLite 数据库路径
+  # PostgreSQL settings (optional)
+  # host: "localhost"
+  # port: 5432
+  # database: "bambu_prints"
+  # user: "postgres"
+  # password: "password"
+
+# MQTT Settings
+mqtt:
+  host: "localhost"
+  port: 1883
+  topic_prefix: "bambu_a1_mini" 

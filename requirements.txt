@@ -1,0 +1,5 @@
+pyyaml>=6.0.1
+sqlalchemy>=2.0.0
+bambulabs_api>=1.0.0
+paho-mqtt>=1.6.1
+python-dotenv>=1.0.0 
